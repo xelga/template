@@ -12,6 +12,6 @@ gulp.task('png-sprites', () => {
 			retinaImgName: 'sprite@2x.png',
 			retinaImgPath: '../images/sprites/sprite@2x.png'
 		}));
-	spriteData.img.pipe(gulp.dest('app/images/sprites/'));
+	spriteData.img.pipe(gulp.dest('dist/assets/images/sprites/'));
 	spriteData.css.pipe(gulp.dest('app/styles/'));
 });
