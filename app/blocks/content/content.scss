@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+@import '../../styles/png-sprites';
+
+.content {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.content__section {
+	margin-top: 40px;
+}
+
+.content__link {
+	color: $textColor;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.content__png-sprite {
+	@include retina-sprite($startup-group);
+	display: inline-block;
+
+	&:hover {
+		@include retina-sprite($startup-hover-group);
+	}
+}
+
+.content__svg-sprite {
+	transition: fill .25s;
+
+	&:hover {
+		fill: currentColor;
+	}
+}

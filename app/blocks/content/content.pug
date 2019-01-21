@@ -1,0 +1,24 @@
+main.content
+	h1 A template for a quick start.
+	p GULP, PUG, SASS, Normalize, PNG-sprites (обычный и Retina), SVG-sprite, ESLint, Stylelint, PUG-lint
+	p Hey! There are some points to make it easier to use!
+	section.content__section
+		h2= 'Tag <picture>'
+		picture
+			source(media='(min-width: 800px)', type='image/webp', srcset='./assets/images/desktop/startup@1x.webp, ./assets/images/desktop/startup@2x.webp 2x')
+			source(media='(min-width: 800px)', srcset='./assets/images/desktop/startup@1x.png, ./assets/images/desktop/startup@2x.png 2x')
+			source(media='(min-width: 600px)', type='image/webp', srcset='./assets/images/tablet/startup@1x.webp, ./assets/images/tablet/startup@2x.webp 2x')
+			source(media='(min-width: 600px)', srcset='./assets/images/tablet/startup@1x.png, ./assets/images/tablet/startup@2x.png 2x')
+			source(type='image/webp', srcset='./assets/images/mobile/startup@1x.webp, ./assets/images/mobile/startup@2x.webp 2x')
+			img(src='./assets/images/mobile/startup@1x.png', srcset='./assets/images/mobile/startup@2x.png 2x', alt='Rocket')
+		p
+			| Convert images to WebP:
+			|
+			a.content__link(href='https://squoosh.app/') https://squoosh.app/
+	section.content__section
+		h2 PNG-sprite
+		span.content__png-sprite
+	section.content__section
+		h2 SVG-sprite
+		svg.content__svg-sprite(width='60px', height='60px')
+			use(xlink:href='./assets/svg/svg-sprite.svg#icon-startup')
